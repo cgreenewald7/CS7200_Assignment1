@@ -22,11 +22,11 @@ for persons in input_data[n_persons:n_persons+n_persons]:
 print("Women: ", women)
 
 # make a group of each persons preferences
-men_prefered = {}
+men_perfered = {}
 for persons in input_data[0:n_persons]:
     each_man = persons[0]
     prefered_women = persons[1:]
-    men_prefered[each_man] = prefered_women
+    men_perfered[each_man] = prefered_women
 
 women_perfered = {}
 for persons in input_data[n_persons:n_persons+n_persons]:
@@ -34,7 +34,7 @@ for persons in input_data[n_persons:n_persons+n_persons]:
     prefered_man = persons[1:]
     women_perfered[each_woman] = prefered_man
 
-print(men_prefered)
+print(men_perfered)
 
 # start everyone off as single
 single_man = {man: True for man in men}
@@ -66,7 +66,7 @@ while any(single_man.values()):
         if single_man[man]:
             
             # Let w be the highest-ranked woman in ms preference list to whom m has not yet proposed 
-            for woman in men_prefered[man]:
+            for woman in men_perfered[man]:
                 if woman in proposals_occured[man]:
                     continue
                 proposals_occured[man].append(woman)
@@ -104,7 +104,6 @@ while any(single_man.values()):
                         single_women[woman] = False
                         print(f"{woman} prefers {man} over {current_man}, switching partners")
                         break                     
-
 
 # return the set S of engaged pairs 
 print("The engaged couples are: ", couples_engaged)
