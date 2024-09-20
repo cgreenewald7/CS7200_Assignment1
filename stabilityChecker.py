@@ -1,3 +1,6 @@
+# Assignment completed exclusively by: Calvin Greenewald
+# Email: greenewald.6@wright.edu
+
 # check if the engaged pairs are a stable matching or not 
 import pandas as pd 
 from assignment1 import men_perfered, women_perfered

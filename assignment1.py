@@ -1,3 +1,6 @@
+# Assignment completed exclusively by: Calvin Greenewald
+# Email: greenewald.6@wright.edu
+
 import pandas as pd 
 
 # open the input file 
