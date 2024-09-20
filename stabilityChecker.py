@@ -5,7 +5,7 @@ from assignment1 import men_perfered, women_perfered
 
 # open the input file 
 engaged_couples_input = []
-with open('Output.txt', 'r') as input_file:
+with open('./Tests/Output0.txt', 'r') as input_file:
     rows = input_file.readlines()
     for row in rows[:-1]:
         engaged_couples_input.append(row.strip().split())

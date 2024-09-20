@@ -2,7 +2,7 @@ import pandas as pd
 
 # open the input file 
 input_data = []
-with open('Input.txt', 'r') as input_file:
+with open('./Tests/Input0.txt', 'r') as input_file:
     n_persons = int(input_file.readline().strip())
     for i, row in enumerate(input_file):
         input_data.append(row.strip().split())
@@ -112,7 +112,7 @@ print("The engaged couples are: ", couples_engaged)
 print("The number of engagements was: ", num_engagements)
 
 # write engagements to the output file 
-output_file = open(r"Output.txt", "w")
+output_file = open(r"./Tests/Output0.txt", "w")
 for woman, man in couples_engaged.items():
     output_file.write(man + ' ' + woman + '\n')
 output_file.write(str(num_engagements))
