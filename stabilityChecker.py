@@ -15,7 +15,7 @@ with open('./Tests/Output1.txt', 'r') as input_file:
 
 print(engaged_couples_input)
 
-def stability(men_prefered, women_perfered):
+def stabilityChecker(men_prefered, women_perfered):
     couples_male = {man: woman for man, woman in engaged_couples_input}  
     couples_female = {woman: man for man, woman in engaged_couples_input} 
 
@@ -32,7 +32,7 @@ def stability(men_prefered, women_perfered):
     return True
 
 output_file = open(r"Verified.txt", "w")
-if stability(men_perfered, women_perfered):
+if stabilityChecker(men_perfered, women_perfered):
     # write stability to file 
     output_file.write("Stable")
     print("The matching is stable.")
@@ -41,3 +41,4 @@ else:
     print("The matching is unstable.")
 
 output_file.close()
+
