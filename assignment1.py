@@ -1,13 +1,19 @@
 # Assignment completed exclusively by: Calvin Greenewald
 # Email: greenewald.6@wright.edu
-
+import sys
 import pandas as pd 
+
+# get the input file
+if len(sys.argv) > 1:
+    input_file = sys.argv[1]
+else:
+    input_file = "Input.txt"
 
 # open the input file 
 input_data = []
-with open('./Tests/Input2.txt', 'r') as input_file:
-    n_persons = int(input_file.readline().strip())
-    for i, row in enumerate(input_file):
+with open(input_file, 'r') as file:
+    n_persons = int(file.readline().strip())
+    for i, row in enumerate(file):
         input_data.append(row.strip().split())
 
 # print("Number of persons of each gender: ", n_persons)
@@ -104,13 +110,13 @@ while any(single_man.values()):
                         break                     
 
 # return the set S of engaged pairs 
-print("The engaged couples are: ", couples_engaged)
+# print("The engaged couples are: ", couples_engaged)
 
 # print the number of engagements 
-print("The number of engagements was: ", num_engagements)
+# print("The number of engagements was: ", num_engagements)
 
 # write engagements to the output file 
-output_file = open(r"./Tests/Output2.txt", "w")
+output_file = open(r"Output.txt", "w")
 for woman, man in couples_engaged.items():
     output_file.write(man + ' ' + woman + '\n')
 output_file.write(str(num_engagements))
