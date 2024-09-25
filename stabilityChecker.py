@@ -4,7 +4,6 @@
 # check if the engaged pairs are a stable matching or not 
 import pandas as pd 
 import sys
-# import os
 
 # get the input and output files
 if len(sys.argv) > 2:
@@ -42,7 +41,7 @@ engaged_couples_input = []
 with open(outputToBeVerified, 'r') as otbv:
     rows = otbv.readlines()
     # check if there is an integer at the bottom of the file 
-    # the output to be verified files dont need the integer at the bottom per the requirements 
+    # the output to be verified files dont require the integer at the bottom per the assignment 
     if rows[-1].strip().isdigit():
         rows = rows[:-1]
 
